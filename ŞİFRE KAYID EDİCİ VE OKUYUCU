@@ -1,0 +1,24 @@
+import time
+isimkaydedici = input("lft isminizi belirleyin : ")
+şifrekaydedici = input("lft şifrenizi belirleyin : ")
+
+liste = {}
+liste[isimkaydedici] = şifrekaydedici
+
+
+
+isim = input("isiminizi giriniz : ")
+
+if isim in liste :
+    print("isminiz doğru lft şifre giriniz")
+    time.sleep(2)
+    sifre = input("şifrenizi giriniz : ")
+    if (sifre == liste[isim]):
+        print("sifreniz doğru başarıyla giriş yaptınız")
+    else :
+        print("hatalı şifre ")
+        time.sleep(100000)
+
+else :
+    print("böyle bir isim bulunamadı")
+    time.sleep(10000)
